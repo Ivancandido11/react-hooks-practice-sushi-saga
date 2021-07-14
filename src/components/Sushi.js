@@ -8,8 +8,8 @@ function Sushi({ piece, onPlateClick, onHandlePrice, balance }) {
       if(!eaten) {
         onPlateClick(piece)
         setEaten(true)
+        onHandlePrice(piece.price)
       }
-      onHandlePrice(piece.price)
     }
   }
 
