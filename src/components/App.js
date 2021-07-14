@@ -19,7 +19,7 @@ function App() {
   }, [])
 
   const handleMoreClick = () => {
-    if(start < 96 && end < 100){
+    if(start < (allSushi.length - 4) && end < allSushi.length){
       setStart(start => start + 4)
       setEnd(end => end + 4)
     } else {
