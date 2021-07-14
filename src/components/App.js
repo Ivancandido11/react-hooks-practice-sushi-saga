@@ -19,8 +19,13 @@ function App() {
   }, [])
 
   const handleMoreClick = () => {
-    setStart(start => start + 4)
-    setEnd(end => end + 4)
+    if(start < 96 && end < 100){
+      setStart(start => start + 4)
+      setEnd(end => end + 4)
+    } else {
+      setStart(0)
+      setEnd(4)
+    }
   }
   const handleEatSushi = (piece) => {
     setPlates([...plates, piece])
